@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #96ceb4;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+.cards {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.card {
+  margin: 0 30px;
+  padding: 150px 55px 40px;
+  border-radius: 0.3em;
+  z-index: 3;
+
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.09)
+  );
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(5px);
+}
+
+.overflow-container {
+  overflow: hidden;
+}
+
+img {
+  position: absolute;
+  background-size: 100%;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  transition-duration: 0.5s;
+}
+
+h3 {
+  letter-spacing: 1px;
+}
+
+p {
+  text-transform: uppercase;
+  font-size: smaller;
+}
+
+.size-container {
+  margin-top: 15px;
+  display: flex;
+}
+
+.size-container > :first-child {
+  margin-right: 0.5em;
+}
+
+.size {
+  display: flex;
+}
+
+.size p {
+  background-color: white;
+  color: black;
+  font-size: smaller;
+  font-weight: bold;
+  padding: 0.1em 0.4em;
+  margin: 0 0.3em;
+  border-radius: 0.3em;
+  cursor: pointer;
+  transition: all linear ease-out;
+}
+
+.size p:hover {
+  transform: scale(1.1);
+  background-color: rgb(83, 214, 83);
+}
+
+.color {
+  display: flex;
+  margin: 15px 0 25px;
+}
+
+.color div {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.color div:first-of-type {
+  background-color: black;
+  margin-left: 0.7em;
+}
+
+.color-blue {
+  background-color: rgb(10, 10, 179);
+}
+
+.color-red {
+  background-color: rgb(192, 6, 6);
+}
+
+.color div:hover {
+  border: 2px solid rgb(207, 202, 202);
+}
+
+.button {
+  background-color: white;
+  color: black;
+  font-weight: 600;
+  text-transform: capitalize;
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  margin-bottom: 5px;
+  border-radius: 2em;
+  cursor: pointer;
+
+  transition: all linear infinite;
+}
+
+.button:hover {
+  transform: scale(1.07);
+}
+
+/* Adding Animation */
+
+.second-container,
+.first-container h3 {
+  transform: translateY(200%);
+  transition: transform 800ms ease;
+}
+
+.first-container {
+  position: relative;
+}
+
+.black-shoe {
+  width: 16em;
+  height: 21em;
+
+  top: -13em;
+  left: -3.5em;
+}
+
+.blue-shoe {
+  width: 15em;
+  height: 15em;
+
+  top: -9em;
+  left: -2.9em;
+}
+
+.red-shoe {
+  width: 17em;
+  height: 17.5em;
+
+  top: -11em;
+  left: -3.9em;
+}
+
+.card:hover .second-container {
+  transform: translateY(0%);
+}
+
+.card:hover .first-container h3 {
+  transform: translateY(0%);
+}
+
+.card:hover img {
+  transition: 500ms linear all;
+}
+
+.card:hover .first-container img {
+  transform: rotateZ(-45deg) scale(1.2);
+}
+
+/* Change shoes position after hovering */
+.card:hover .black-shoe {
+  top: -19em;
+  left: -6em;
+}
+
+.card:hover .blue-shoe {
+  top: -16em;
+  left: -4em;
+}
+
+.card:hover .red-shoe {
+  top: -17.5em;
+  left: -6em;
+}
+
+/* BACKGROUND CIRCLES */
+.circle-top {
+  background-color: #ffcc5c;
+  width: 50em;
+  height: 50em;
+  border-radius: 50em;
+  position: absolute;
+  top: -20em;
+  right: -20em;
+}
+
+.circle-bottom {
+  background-color:#ff6f69;
+  width: 50em;
+  height: 50em;
+  border-radius: 50em;
+  position: absolute;
+  bottom: -20em;
+  left: -20em;
+}
